@@ -1,15 +1,16 @@
-import {useState} from 'react'
-import useDebounce from './useDebounce'
+import { useState } from "react";
+import useDebounce from "./useDebounce";
 function DebounceComponent() {
-  const [count,setCount]=useState(10)
-  useDebounce(()=>alert(count),1000,[count])
+  const [count, setCount] = useState(10);
+  useDebounce(() => alert(count), 1000, [count]);
 
   return (
-    <div>
+    <div style={{ marginTop: "20px" }}>
+      <div>debounce</div>
       <div>{count}</div>
-      <button onClick={()=>setCount(c=>c+1)}>Increment</button>
+      <button onClick={() => setCount((c) => c + 1)}>Increment</button>
     </div>
-  )
+  );
 }
 
-export default DebounceComponent
+export default DebounceComponent;
