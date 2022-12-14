@@ -1,10 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-
+import { Outlet, Link } from 'react-router-dom'
+import routes from '../router'
 function Home() {
+  const childrenRoutes = routes[1].children
   return (
-    <div style={{ width: '100%', height: '50px', background: 'gray' }}>
-      <Link to="/customHook">CustomHook</Link>
+    <div>
+      <div>
+        {childrenRoutes.map((item, index) => {
+          const { path } = item
+          return (
+            <Link key={index} style={{ margin: '20px' }} to={path}>
+              {path.replace(/\//g, '')}
+            </Link>
+          )
+        })}
+      </div>
+      <Outlet />
     </div>
   )
 }
