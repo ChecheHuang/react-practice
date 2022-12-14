@@ -1,11 +1,11 @@
-import React from "react";
-import { createArray } from "./lib";
-import Star from "./Star";
+import React from 'react'
+import { createArray } from './lib'
+import Star from './Star'
 
 export default function StarRating({
   totalStars = 5,
   selectedStars = 0,
-  onRate = f => f
+  onRate = (f) => f,
 }) {
   return (
     <>
@@ -20,5 +20,5 @@ export default function StarRating({
         {selectedStars} of {totalStars} stars
       </p>
     </>
-  );
+  )
 }

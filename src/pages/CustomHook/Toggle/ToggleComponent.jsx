@@ -1,7 +1,7 @@
-import useToggle from "./useToggle";
+import useToggle from './useToggle'
 
 function ToggleComponent() {
-  const [value, toggleValue] = useToggle(false);
+  const [value, toggleValue] = useToggle(false)
 
   return (
     <div>
@@ -10,20 +10,20 @@ function ToggleComponent() {
       <button onClick={toggleValue}>Toggle</button>
       <button
         onClick={() => {
-          toggleValue(true);
+          toggleValue(true)
         }}
       >
         Make True
       </button>
       <button
         onClick={() => {
-          toggleValue(false);
+          toggleValue(false)
         }}
       >
         Make False
       </button>
     </div>
-  );
+  )
 }
 
-export default ToggleComponent;
+export default ToggleComponent

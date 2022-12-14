@@ -1,10 +1,10 @@
-import React from "react";
-import StarRating from "./StarRating";
-import { FaTrash } from "react-icons/fa";
-import { useColors } from "./ColorProvider";
+import React from 'react'
+import StarRating from './StarRating'
+import { FaTrash } from 'react-icons/fa'
+import { useColors } from './ColorProvider'
 
 export default function Color({ id, title, color, rating }) {
-  const { rateColor, removeColor } = useColors();
+  const { rateColor, removeColor } = useColors()
   return (
     <section>
       <h1>{title}</h1>
@@ -14,8 +14,8 @@ export default function Color({ id, title, color, rating }) {
       <div style={{ height: 50, backgroundColor: color }} />
       <StarRating
         selectedStars={rating}
-        onRate={rating => rateColor(id, rating)}
+        onRate={(rating) => rateColor(id, rating)}
       />
     </section>
-  );
+  )
 }

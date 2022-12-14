@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 function useTootle(defaultValue) {
-  const [value, setValue] = useState(defaultValue);
+  const [value, setValue] = useState(defaultValue)
 
   function toggleValue(value) {
     setValue((currentValue) =>
-      typeof value === "boolean" ? value : !currentValue
-    );
+      typeof value === 'boolean' ? value : !currentValue
+    )
   }
 
-  return [value, toggleValue];
+  return [value, toggleValue]
 }
 
-export default useTootle;
+export default useTootle
