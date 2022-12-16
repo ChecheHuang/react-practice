@@ -1,5 +1,11 @@
 {
-  "extends": ["react-app"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "eslint-config-prettier"
+    ],
   "plugins": ["prettier", "react-hooks"],
   "rules": {
     "prettier/prettier": "warn",
@@ -7,3 +13,5 @@
     "react-hooks/exhaustive-deps": "warn"
   }
 }
+
+

@@ -20,7 +20,7 @@ function useMousePosition() {
 export default function UseLayoutEffect3() {
   const [left, top] = useMousePosition()
   return (
-    <div style={{ position: 'absolute', top, left, cursor: 'none' }}>
+    <div style={{ position: 'absolute', top:top+200, left:left+200, cursor: 'cursor' }}>
       在瀏覽器繪圖前就取得
       {top}x{left}
     </div>

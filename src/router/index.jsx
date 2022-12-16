@@ -1,10 +1,11 @@
 import React, { lazy } from 'react'
 import Home from '../pages/Home'
+import Loading from '../components/Loading'
 const CustomHook = lazy(() => import('../pages/CustomHook/CustomHook'))
 const Ch06 = lazy(() => import('../pages/LearnReact/Ch06'))
 const Ch07 = lazy(() => import('../pages/LearnReact/Ch07'))
 const withLoadingComponent = (comp) => (
-  <React.Suspense fallback={<div>Loading</div>}>{comp}</React.Suspense>
+  <React.Suspense fallback={<Loading/>}>{comp}</React.Suspense>
 )
 
 const data = [
