@@ -4,6 +4,7 @@ import TimeComponent from './Timeout/TimeComponent'
 import DebounceComponent from './Debounce/DebounceComponent'
 import UpdateEffectComponent from './UpdateEffect/UpdateEffectComponent'
 import ArrayComponent from './Array/ArrayComponent'
+import InputComponent from './Input/InputComponent'
 
 function CustomHook() {
   return (
@@ -13,6 +14,7 @@ function CustomHook() {
       <DebounceComponent />
       <UpdateEffectComponent />
       <ArrayComponent />
+      <InputComponent />
     </>
   )
 }

@@ -1,9 +1,9 @@
 import { useRoutes } from 'react-router-dom'
 import routes from './router'
-import Practice from './practice/Practice'
+import Practice from './Practice'
 function App() {
   const outlet = useRoutes(routes)
-  // return outlet
+  return outlet
   return <Practice/>
 }
 
