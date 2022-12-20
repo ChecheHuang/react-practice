@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
-import UseMemo1 from './UseMemo1'
-import UseMemo2 from './UseMemo2'
-import UseCallback1 from './UseCallback1'
-import UseCallback2 from './UseCallback2'
-import UseLayoutEffect1 from './UseLayoutEffect1'
-import UseLayoutEffect2 from './UseLayoutEffect2'
-import UseLayoutEffect3 from './UseLayoutEffect3'
-import UseReducer1 from './UseReducer1'
-import UseReducer2 from './UseReducer2'
-import UseReducer3 from './UseReducer3'
-import UseReducer4 from './UseReducer4'
-import UseReducer5 from './UseReducer5'
-import UseReducer6 from './UseReducer6'
+import UseMemo1 from './UseMemo/UseMemo1'
+import UseMemo2 from './UseMemo/UseMemo2'
+import UseCallback1 from './UseCallback/UseCallback1'
+import UseCallback2 from './UseCallback/UseCallback2'
+import UseLayoutEffect1 from './UseLayoutEffect/UseLayoutEffect1'
+import UseLayoutEffect2 from './UseLayoutEffect/UseLayoutEffect2'
+import UseLayoutEffect3 from './UseLayoutEffect/UseLayoutEffect3'
+import UseReducer1 from './UseReducer/UseReducer1'
+import UseReducer2 from './UseReducer/UseReducer2'
+import UseReducer3 from './UseReducer/UseReducer3'
+import UseReducer4 from './UseReducer/UseReducer4'
+import UseReducer5 from './UseReducer/UseReducer5'
+import UseReducer6 from './UseReducer/UseReducer6'
+import PureComponent from './PureComponent/PureComponent'
 
 function Ch07() {
-  const items = ['useMemo', 'useCallback', 'useLayoutEffect', 'useReducer']
+  const items = ['useMemo', 'useCallback', 'useLayoutEffect', 'useReducer','PureComponent']
   const [item, setItem] = useState('')
 
   return (
@@ -66,6 +67,11 @@ function Ch07() {
           <UseReducer4 />
           <UseReducer5 />
           <UseReducer6 />
+        </div>
+      )}
+      {item === 'PureComponent' && (
+        <div>
+          <PureComponent />
         </div>
       )}
     </>

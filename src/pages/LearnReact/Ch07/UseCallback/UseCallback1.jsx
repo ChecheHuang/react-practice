@@ -13,11 +13,11 @@ function WordCount({ children = '' }) {
   useAnyKeyToRender()
 
   const fn = () => {
-    console.log('我在useEffect被呼叫')
+    console.count('我是fn')
   }
 
   useEffect(() => {
-    console.log('UseCallback1因為fn的rerender')
+    console.count('useEffect裡面相依於fn()，但在rerender每次都會被執行')
     fn()
   }, [fn])
 

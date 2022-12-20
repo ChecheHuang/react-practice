@@ -1,5 +1,5 @@
 import React from "react";
-import { useIterator } from "./hooks";
+import { useIterator } from "../hooks";
 import RepositoryReadme from "./RepositoryReadme";
 
 export default function RepoMenu({ repositories, login }) {

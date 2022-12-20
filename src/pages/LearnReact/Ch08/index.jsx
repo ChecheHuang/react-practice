@@ -1,6 +1,6 @@
 import React from 'react'
-import BigListComponent from './BigListComponent'
-import GithubUserSample from './GithubUserSample'
+import BigListComponent from './BigListComponent/BigListComponent'
+import GithubUserSample from './GithubUserSample/GithubUserSample'
 function index() {
   return (
     <>

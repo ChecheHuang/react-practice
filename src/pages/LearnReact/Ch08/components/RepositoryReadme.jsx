@@ -18,7 +18,6 @@ export default function RepositoryReadme({ repo, login }) {
 
   useEffect(() => {
     if (!repo || !login) return;
-    console.log("test")
     loadReadme(login, repo).catch(setError);
   }, [repo]);
 
