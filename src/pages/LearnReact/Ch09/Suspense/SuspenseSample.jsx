@@ -1,6 +1,7 @@
 import React, { useReducer, lazy, Suspense } from 'react'
 // import Main from './Main'
 const Main = lazy(() => import('./Main'))
+const Gnar = lazy(() => import('./Gnar'))
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 
 function SuspenseSample() {
@@ -16,11 +17,18 @@ function SuspenseSample() {
   }
 
   return (
-    <ErrorBoundary>
-      <Suspense fallback={<div>loading.....</div>}>
-        <Main />
-      </Suspense>
-    </ErrorBoundary>
+    <>
+      <ErrorBoundary>
+        <Suspense fallback={<div>loading.....</div>}>
+          <Main />
+        </Suspense>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<div>loading.....</div>}>
+          <Gnar />
+        </Suspense>
+      </ErrorBoundary>
+    </>
   )
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 
-function Main() {
   //todo 成功
   //   const loadStatus = () => 'success - ready'
   //todo 失敗
@@ -21,12 +20,15 @@ function Main() {
       .catch((e) => (error = e))
 
     return function () {
-        console.log(response)
       if (error) throw error
       if (response) return response
       throw promise
     }
   })()
+
+
+
+function Main() {
 
   const status = loadStatus()
 
@@ -34,3 +36,5 @@ function Main() {
 }
 
 export default Main
+
+
