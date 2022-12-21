@@ -8,7 +8,7 @@ const Ch08 = lazy(() => import('../pages/LearnReact/Ch08'))
 const Ch09 = lazy(() => import('../pages/LearnReact/Ch09'))
 const Ch10 = lazy(() => import('../pages/LearnReact/Ch10'))
 const withLoadingComponent = (comp) => (
-  <React.Suspense fallback={<Loading/>}>{comp}</React.Suspense>
+  <React.Suspense fallback={<Loading />}>{comp}</React.Suspense>
 )
 
 const data = [
@@ -19,12 +19,12 @@ const data = [
   { path: 'learnReact/ch09', element: <Ch09 /> },
   { path: 'learnReact/ch10', element: <Ch10 /> },
 ]
-const newData = data.map((item)=>{
-    const {path,element}=item
-    const newItem ={}
-    newItem.path="/"+path
-    newItem.element=withLoadingComponent(element)
-    return newItem
+const newData = data.map((item) => {
+  const { path, element } = item
+  const newItem = {}
+  newItem.path = '/' + path
+  newItem.element = withLoadingComponent(element)
+  return newItem
 })
 
 const routes = [

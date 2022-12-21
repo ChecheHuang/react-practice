@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function useTootle(defaultValue) {
   const [value, setValue] = useState(defaultValue)

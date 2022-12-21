@@ -3,10 +3,10 @@ import ErrorBoundarySample from './ErrorBoundary/ErrorBoundarySample'
 import SuspenseSample from './Suspense/SuspenseSample'
 function index() {
   return (
-      <>
-          {/* <ErrorBoundarySample/> */}
-          <SuspenseSample/>
-      </>
+    <>
+      {/* <ErrorBoundarySample/> */}
+      <SuspenseSample />
+    </>
   )
 }
 
