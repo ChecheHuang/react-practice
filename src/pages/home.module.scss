@@ -1,0 +1,18 @@
+@import "../mixin.scss";
+
+.aaa{
+    color: red;
+
+
+ 
+    
+    @include ipad{
+        color: green;
+    }
+    
+    // @include iphone{
+    //     color: lightblue;
+    // }
+    // @include dFlexCenter(100px,200px);
+    // background: gray;
+}
