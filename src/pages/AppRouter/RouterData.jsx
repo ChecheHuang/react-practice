@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import {useLoaderData,useNavigation} from 'react-router-dom'
+import {useLoaderData} from 'react-router-dom'
 function RouterData() {
   const img = useLoaderData()
-  const navigation = useNavigation()
-
-  if (navigation.state==="loading") {
-    return <div>Loading......</div>
-  }
 
   // const [img, setImg] = useState()
   // useEffect(() => {
@@ -25,7 +20,6 @@ function RouterData() {
       RouterData
       <br/>
       {img}
-      {/* <img style={{ width: '200px' }} src={img} /> */}
     </div>
   )
 }
