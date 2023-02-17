@@ -11,6 +11,7 @@ import {
   useLoaderData,
   useOutletContext,
   useNavigate,
+  useRouteError,
 } from 'react-router-dom'
 function index() {
   const jsxRouter = createBrowserRouter(
@@ -44,11 +45,16 @@ function index() {
         {
           path: '/scroll',
           element: <ScrollToBottom />,
+          errorElement: <ErrorBoundary />,
           loader: async () => {
-            const info = await new Promise((resolve) => {
-              setTimeout(() => resolve('這是非同步初始獲得的資料'), 1000)
-            })
-            return info
+            try {
+              const info = await new Promise((resolve, reject) => {
+                setTimeout(() => resolve('這是非同步初始獲得的資料'), 1000)
+              })
+              return info
+            } catch (err) {
+              console.log(err)
+            }
           },
         },
       ],
@@ -206,6 +212,11 @@ function ScrollToBottom() {
       </div>
     </div>
   )
+}
+function ErrorBoundary() {
+  const error = useRouteError()
+  console.error(error)
+  return <div>{error.message}</div>
 }
 
 const style = {
