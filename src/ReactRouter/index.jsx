@@ -126,7 +126,13 @@ function Root() {
         >
           scroll
         </NavLink>
-        {isLogin? "已登入":"尚未登入"}
+        {isLogin ? (
+          <div>
+            <button onClick={handleLogout}>登出</button>
+          </div>
+        ) : (
+          '尚未登入'
+        )}
         <div>
           <div>context資料</div>
           <div>{info}</div>
@@ -175,7 +181,7 @@ function Loader() {
   )
 }
 function Context() {
-   const { info, setInfo, handleLogout } = useOutletContext()
+   const { info, setInfo } = useOutletContext()
   return (
     <>
       <div>context</div>
@@ -185,7 +191,6 @@ function Context() {
         value={info}
         onChange={(e) => setInfo(e.target.value)}
       />
-      <button onClick={handleLogout}>登出</button>
     </>
   )
 }
