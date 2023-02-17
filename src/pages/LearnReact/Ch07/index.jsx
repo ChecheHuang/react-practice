@@ -13,9 +13,17 @@ import UseReducer4 from './UseReducer/UseReducer4'
 import UseReducer5 from './UseReducer/UseReducer5'
 import UseReducer6 from './UseReducer/UseReducer6'
 import PureComponent from './PureComponent/PureComponent'
+import UseImperativeHandle from './UseImperativeHandle/UseImperativeHandle'
 
 function Ch07() {
-  const items = ['useMemo', 'useCallback', 'useLayoutEffect', 'useReducer','PureComponent']
+  const items = [
+    'useMemo',
+    'useCallback',
+    'useLayoutEffect',
+    'useReducer',
+    'PureComponent',
+    'UseImperativeHandle',
+  ]
   const [item, setItem] = useState('')
 
   return (
@@ -72,6 +80,11 @@ function Ch07() {
       {item === 'PureComponent' && (
         <div>
           <PureComponent />
+        </div>
+      )}
+      {item === 'UseImperativeHandle' && (
+        <div>
+          <UseImperativeHandle />
         </div>
       )}
     </>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet, Link } from 'react-router-dom'
-import routes from '../router'
+import {routes} from '../App'
 function Home() {
   const childrenRoutes = routes[1].children
   return (
