@@ -1,0 +1,29 @@
+name: react-practice
+id: a293663b-a90f-49f3-9a05-57925db6cd1a
+language: JavaScript
+extensions:
+  - .js
+  - ._js
+  - .bones
+  - .cjs
+  - .es
+  - .es6
+  - .frag
+  - .gs
+  - .jake
+  - .javascript
+  - .jsb
+  - .jscad
+  - .jsfl
+  - .jslib
+  - .jsm
+  - .jspre
+  - .jss
+  - .jsx
+  - .mjs
+  - .njs
+  - .pac
+  - .sjs
+  - .ssjs
+  - .xsjs
+  - .xsjslib

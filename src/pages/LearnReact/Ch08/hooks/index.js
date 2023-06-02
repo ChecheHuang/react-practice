@@ -41,6 +41,7 @@ export const useIterator = (items = [], initialValue = 0) => {
     setIndex(i - 1);
   }, [i]);
 
+  
   const next = useCallback(() => {
     if (i === items.length - 1) return setIndex(0);
     setIndex(i + 1);

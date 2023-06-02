@@ -17,7 +17,7 @@ const withLoadingComponent = (comp) => (
 )
 const data = [
   { path: 'customHook', element: <CustomHook /> },
-  { path: 'learnReact/ch06', element: <Ch06 /> },
+  { path: 'learnReact/ch06', element: <Ch06 / > },
   { path: 'learnReact/ch07', element: <Ch07 /> },
   { path: 'learnReact/ch08', element: <Ch08 /> },
   { path: 'learnReact/ch09', element: <Ch09 /> },
@@ -39,7 +39,7 @@ export const routes = [
   },
 ]
 function App() {
-  return <ReactRouter/>
+  // return <ReactRouter/>
   const router = createBrowserRouter(routes)
   return <RouterProvider router={router} />
 }
